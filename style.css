@@ -1,0 +1,133 @@
+body {
+    background:rgba(189, 98, 114, 0.8);
+    font-family: 'Clicker Script', "monotype corsiva", cursive;
+    background:radial-gradient(#4e4d0f,#341a1a);
+}
+.frame {
+    float:left;
+    padding:80px;
+}
+.smile-box{
+    width:250px;
+    height:250px;
+    top:30px;
+    position:relative;
+    animation:jump 3s linear 20s infinite;
+}
+.smile-box.two{animation:jump 4s linear 21s infinite;}
+.smile-box.three{animation:jump 5s linear 21s infinite;}
+.smile{
+            width:100%;
+            height:100%;
+            border-radius:100%;
+            background:linear-gradient(to top left,yellow,#f6d23e);
+            box-shadow:0px 20px 40px rgba(0, 0, 0, .6);
+            animation:wish 4s linear 1;
+}
+.eye{
+            width:12%;
+            height:20%;
+            position:relative;
+            background:black;
+            border-radius:100%;
+            animation:blink 3s linear 6s infinite;
+            transition:2s;
+        }
+.eye-ball{
+            width:30%;
+            height:20%;
+            top:60%;
+            left:45%;
+            position:absolute;
+            border-radius:100%;
+            background:white;
+            color:black;
+}
+#eye-1{
+            left:30%;
+            top:25%;
+}
+#eye-2{
+            left:60%;
+            top:5%;
+}
+.mouth{
+            width:50%;
+            height:20%;
+            position:relative;
+            background:black;
+            top:35%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            border-radius:0 0 100px 100px/0px 0px 90px 90px;
+            animation:smile 3s linear 9s 3;
+}
+.corner {
+            width: 5px;
+            height: 20px;
+            background: black;
+            border-radius: 100px/160px;
+            position: absolute;
+            top: -10px;
+            transform: rotate(65deg);
+            left: -5px;	
+}
+.corner.right {
+            left:125px;
+            transform: rotate(-65deg);	
+}
+.word{
+            color:white;
+            font-size:2em;
+            text-align:center;
+            position:relative;
+            top:-60px;
+}
+#wishes{
+            bottom:10px;
+            left:200px;
+            position:fixed;
+            text-align:center;
+            font-family:"monotype corsiva","Brush Script Std";
+padding:10px;
+}
+h1{
+            animation:type 15s steps(50, end) infinite;
+            font-size:2em;
+            white-space:nowrap;
+            width:30em;
+            color:gold;
+            text-shadow:0px 0px 10px black;
+            overflow:hidden;
+}
+@keyframes smile{
+            20%{height:30%;}
+            80%{height:30%;}
+}
+@keyframes blink{
+            0%{transform:scale(0.5,0.5);border-radius:100%;transition:2s;},
+            50%{transform:scale(1,1);transition:2s;},
+            100%{transform:scale(.5,.5);transition:2s;},
+        }
+@keyframes wish {
+            0%{transform:scale(0,0);},
+            20%{transform:scale(5,5);},
+            60%{transform:scale(5,5);},
+            80%{transform:scale(2,2);}
+}
+@keyframes jump{
+            20%{top:10px},
+            80%{top:80px},
+            100%{top:10px},
+}
+@keyframes type{
+            from {width:0;}
+}
+.smile-content{
+height:80%;
+position:absolute;
+}
+.text-content{
+//height:20%;
+position:fixed;
+}
